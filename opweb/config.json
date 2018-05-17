@@ -1,0 +1,8 @@
+{
+  "dev": false,
+  "mockMod": "false",
+  "picUrl": "",
+  "baseUrl": "/opapi/api",
+  "bmapUrl": "http://online0.map.bdimg.com/onlinelabel",
+  "mapUrl": "http://183.232.33.177:6080/arcgis/rest/services/hebei/HBZWMap/MapServer"
+}

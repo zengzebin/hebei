@@ -1,0 +1,97 @@
+<bean>
+	<property name="ff0e1" type="java.lang.Double">
+		<column name="FF0E1" precision="18" scale="3">
+			<comment>埋深12时</comment>
+		</column>
+	</property>
+	<property name="ff0e2" type="java.lang.Double">
+		<column name="FF0E2" precision="18" scale="3">
+			<comment>埋深16时</comment>
+		</column>
+	</property>
+	<property name="ff0e3" type="java.lang.Double">
+		<column name="FF0E3" precision="18" scale="3">
+			<comment>埋深20时</comment>
+		</column>
+	</property>
+	<property name="ff0e4" type="java.lang.Double">
+		<column name="FF0E4" precision="18" scale="3">
+			<comment>埋深00时</comment>
+		</column>
+	</property>
+	<property name="ff0e5" type="java.lang.Double">
+		<column name="FF0E5" precision="18" scale="3">
+			<comment>埋深04时</comment>
+		</column>
+	</property>
+	<property name="ff0e6" type="java.lang.Double">
+		<column name="FF0E6" precision="18" scale="3">
+			<comment>埋深08时</comment>
+		</column>
+	</property>
+	<property name="ff031" type="java.lang.Double">
+		<column name="FF031" precision="50" scale="1">
+			<comment>水温12时</comment>
+		</column>
+	</property>
+	<property name="ff032" type="java.lang.Double">
+		<column name="FF032" precision="50" scale="1">
+			<comment>水温16时</comment>
+		</column>
+	</property>
+	<property name="ff033" type="java.lang.Double">
+		<column name="FF033" precision="50" scale="1">
+			<comment>水温20时</comment>
+		</column>
+	</property>
+	<property name="ff034" type="java.lang.Double">
+		<column name="FF034" precision="50" scale="1">
+			<comment>水温00时</comment>
+		</column>
+	</property>
+	<property name="ff035" type="java.lang.Double">
+		<column name="FF035" precision="50" scale="1">
+			<comment>水温04时</comment>
+		</column>
+	</property>
+	<property name="ff036" type="java.lang.Double">
+		<column name="FF036" precision="50" scale="1">
+			<comment>水温08时</comment>
+		</column>
+	</property>
+	<property name="ff391" type="java.lang.Double">
+		<column name="FF391" precision="18" scale="3">
+			<comment>水位12时</comment>
+		</column>
+	</property>
+	<property name="ff392" type="java.lang.Double">
+		<column name="FF392" precision="18" scale="3">
+			<comment>水位16时</comment>
+		</column>
+	</property>
+	<property name="ff393" type="java.lang.Double">
+		<column name="FF393" precision="18" scale="3">
+			<comment>水位20时</comment>
+		</column>
+	</property>
+	<property name="ff394" type="java.lang.Double">
+		<column name="FF394" precision="18" scale="3">
+			<comment>水位0时</comment>
+		</column>
+	</property>
+	<property name="ff395" type="java.lang.Double">
+		<column name="FF395" precision="18" scale="3">
+			<comment>水位4时</comment>
+		</column>
+	</property>
+	<property name="ff396" type="java.lang.Double">
+		<column name="FF396" precision="18" scale="3">
+			<comment>水位8时</comment>
+		</column>
+	</property>
+	<property name="vt" type="java.lang.Double">
+		<column name="VT" precision="10" scale="3">
+			<comment>电量</comment>
+		</column>
+	</property>
+</bean>

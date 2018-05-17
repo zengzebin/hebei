@@ -1,0 +1,47 @@
+<div class="slidebar slidebar-2x on"><div class="slidebar-left"><div class="tools-bar"><div class="pull-left"><ol class="breadcrumb"> {{#each model}} <li> {{#if url}} <a href="{{url}}"><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{^}} <a><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{/if}} </li> {{/each}} </ol></div><div class="pull-right mr-50"><select id="c_station" class="w-200"></select><button id="b_refresh" type="button" class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i>查询</button></div></div><div id="map"></div><script id="tpl_mapOptPanel" type="text/x-handlebars-template"><div class="map-panel">
+                <ul class="map-select">
+                    [[#each site]]
+                    <li class="[[class]]"><a prop-key="site" prop-value="[[value]]">[[name]]</a></li>
+                    [[/each]]
+                </ul>
+                <div class="map-diver"></div>
+                <ul class="map-select">
+                    [[#each people]]
+                    <li class="[[class]]"><a prop-key="people">[[name]]</a></li>
+                    [[/each]]
+                </ul>
+            </div></script><script id="tpl_mapLegend" type="text/x-handlebars-template"><div class="map-panel">
+                <ul class="map-select">
+                    <li><div class="legend-title">图例</div></li>
+                    [[#each legend]]
+                    <li><a><img src="[[url]]"/>[[title]]</a></li>
+                    [[/each]]
+                </ul>
+            </div></script><script id="tpl_mapBtnBack" type="text/x-handlebars-template"><a type="button" class="btn btn-blue">
+                <i class="fa fa-globe mr-5" aria-hidden="true"></i>显示全图
+            </a></script></div><div class="slidebar-right"><div class="slidebar-switch"><i class="fa fa-pie-chart" aria-hidden="true"></i></div><div class="slidebar-inner"><div class="slidebar-content perfect-scrollbar"></div><script id="p_panel_1" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body p-0">
+                        <ul class="picture-list"></ul>
+                    </div>
+                </section></script><script id="p_panel_2" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body p-5">
+                        <table class="table table-striped data-table dataTable">
+                        </table>
+                    </div>
+                </section></script></div></div></div>

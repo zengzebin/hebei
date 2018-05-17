@@ -1,0 +1,290 @@
+{
+  "framework": {
+    "~uikits": "../scss/uikits/uikits",
+    "handlebars-core": "handlebars/handlebars-v4.0.11",
+    "handlebars-helper": "handlebars/helper",
+    "jquery": "jquery-1.12.3/jquery",
+    "jquery-ui": "jquery-ui/jquery-ui",
+    "jquery-nicescroll": "jquery-nicescroll/jquery.nicescroll",
+    "jquery-inputfields": "jquery-inputfields/jquery.inputfields",
+    "jquery-validation": "jquery-validation/jquery.validate",
+    "jquery-formplus": "jquery-formplus/jquery.formplus",
+    "jquery-SuperSlide": "jquery-SuperSlide/jquery.SuperSlide.2.1.1",
+    "jquery-md5": "jquery.md5/jquery.md5",
+    "humanize": "jquery.uploadPreviewer/humanize",
+    "jquery-uploadPreviewer": "jquery.uploadPreviewer/jquery.uploadPreviewer",
+    "imagesloaded": "imagesloaded/imagesloaded.pkgd",
+    "ol": "ol4/ol",
+    "jstree": "jstree/jstree",
+    "bootstrap-datetimepicker": "bootstrap-datetimepicker/bootstrap-datetimepicker",
+    "bootstrap-datetimepickerCN": "bootstrap-datetimepicker/locales/bootstrap-datetimepicker.zh-CN",
+    "moment": "moment/moment-with-locales",
+    "qs": "qs/qs",
+    "jquery-qrcode": "jquery-qrcode/jquery-qrcode-0.14.0",
+    "hchart": "highcharts/highcharts",
+    "hchart-exporting": "highcharts/modules/exporting",
+    "hchart-themes": "highcharts/themes/grid-light",
+    "hchart-custom": "highcharts/custom",
+    "jquery-datatables": "datatables/jquery.dataTables",
+    "jquery-datatables-bootstrap": "datatables/dataTables.bootstrap",
+    "datatables-tableTools": "datatables/plugin/tableTools/dataTables.tableTools",
+    "datatables.net-buttons": "datatables/plugin/buttons/dataTables.buttons",
+    "datatables-buttons-html5": "datatables/plugin/buttons/buttons.html5",
+    "datatables-buttons-print": "datatables/plugin/buttons/buttons.print",
+    "datatables-responsive": "datatables/plugin/responsive/dataTables.responsive",
+    "datatables-scroller": "datatables/plugin/scroller/dataTables.scroller",
+    "datatables-fixedColumns": "datatables/extensions/dataTables.fixedColumns",
+    "jszip": "jszip/jszip",
+    "pdfmake": "pdfmake/pdfmake",
+    "pdfmake_vfs": "pdfmake/vfs_fonts",
+    "fullcalendar": "fullcalendar/fullcalendar",
+    "fullcalendarCN": "fullcalendar/locale/zh-cn",
+    "js-cookie": "js-cookie/js.cookie",
+    "select2": "select2/select2",
+    "select2s": "select2s/select2s",
+    "lightbox2": "lightbox2/lightbox",
+    "toastr": "toastr/toastr",
+    "bootbox": "bootbox/bootbox",
+    "icheck": "icheck/icheck",
+    "bowser": "bowser/bowser",
+    "switchery": "switchery/switchery",
+    "slidebars": "slidebars/slidebars",
+    "prefixfree": "prefixfree/prefixfree",
+    "bootstrap": "bootstrap/bootstrap",
+    "router": "router/q",
+    "text": "require-text/text",
+    "html": "require-html/html",
+    "css": "require-css/css",
+    "common": "../logic/custom/common",
+    "login": "../logic/custom/login",
+    "app": "../logic/custom/app"
+  },
+  "template": {
+    "!problemAdd": "../pages/assistant/problemAdd",
+    "!problemInfoAdd": "../pages/assistant/problemInfoAdd",
+    "!problemPanelAdd": "../pages/assistant/problemPanelAdd",
+    "!manualAdd": "../pages/operation/manualAdd",
+    "!dispatchAdd": "../pages/operation/dispatchAdd",
+    "!planAdd": "../pages/operation/planAdd",
+    "!planInfo": "../pages/operation/planInfo",
+    "!planLine": "../pages/operation/planLine",
+    "!dealAdd": "../pages/operation/dealAdd",
+    "!taskInfo": "../pages/operation/taskInfo",
+    "!taskLine": "../pages/operation/taskLine",
+    "!mapPopup": "../pages/map/mapPopup",
+    "!mapPopup2": "../pages/map/mapPopup2",
+    "!mapPopup3": "../pages/map/mapPopup3",
+    "!historyAdd": "../pages/map/historyAdd",
+    "!mapLocation": "../pages/map/mapLocation",
+    "!stationAdd": "../pages/system/stationAdd",
+    "!stationPicAdd": "../pages/system/stationPicAdd",
+    "!deviceAdd": "../pages/system/deviceAdd",
+    "!changePwd": "../pages/authority/changePwd",
+    "!peopleAdd": "../pages/people/peopleAdd",
+    "!peoplePicAdd": "../pages/people/peoplePicAdd",
+    "!vacationAuditAdd": "../pages/people/vacationAuditAdd",
+    "!vacationAdd": "../pages/people/vacationAdd",
+    "!quitAuditAdd": "../pages/people/quitAuditAdd",
+    "!quitAdd": "../pages/people/quitAdd",
+    "!proxyAdd": "../pages/people/proxyAdd",
+    "!workDay": "../pages/people/workDay",
+    "!storeAdd": "../pages/equipment/storeAdd",
+    "!storeInAdd": "../pages/equipment/storeInAdd",
+    "!storeOutAdd": "../pages/equipment/storeOutAdd",
+    "!storeExamineAdd": "../pages/equipment/storeExamineAdd",
+    "!storeChartAdd": "../pages/equipment/storeChartAdd",
+    "!storeApplyAdd": "../pages/equipment/storeApplyAdd",
+    "!deviceTypeConfAdd": "../pages/equipment/deviceTypeConfAdd",
+    "!deviceTypeAdd": "../pages/equipment/deviceTypeAdd",
+    "!sysuserAdd": "../pages/authority/sysuserAdd",
+    "!sysroleAdd": "../pages/authority/sysroleAdd",
+    "!sysmenuAdd": "../pages/authority/sysmenuAdd",
+    "!classroomAdd": "../pages/assistant/classroomAdd",
+    "!settingAdd": "../pages/support/settingAdd",
+    "!synchronousAdd": "../pages/support/synchronousAdd",
+    "!serverAdd": "../pages/support/serverAdd",
+    "!permissionAdd": "../pages/authority/permissionAdd",
+    "!peopleratingAdd": "../pages/examine/peopleratingAdd",
+    "!header": "../pages/header"
+  },
+  "module": {
+    "dashboard": {
+      "!": "../pages/monitor/dashboard",
+      "_": "../logic/monitor/dashboard"
+    },
+    "servicerating": {
+      "!": "../pages/examine/servicerating",
+      "_": "../logic/examine/servicerating"
+    },
+    "peoplerating": {
+      "!": "../pages/examine/peoplerating",
+      "_": "../logic/examine/peoplerating"
+    },
+    "attendance": {
+      "!": "../pages/attendance/attendance",
+      "_": "../logic/attendance/attendance"
+    },
+    "infomanage": {
+      "!": "../pages/people/infomanage",
+      "_": "../logic/people/infomanage"
+    },
+    "classroom": {
+      "!": "../pages/assistant/classroom",
+      "_": "../logic/assistant/classroom"
+    },
+    "repository": {
+      "!": "../pages/assistant/repository",
+      "_": "../logic/assistant/repository"
+    },
+    "search": {
+      "!": "../pages/assistant/search",
+      "_": "../logic/assistant/search"
+    },
+    "sms": {
+      "!": "../pages/support/sms",
+      "_": "../logic/support/sms"
+    },
+    "outlier": {
+      "!": "../pages/support/outlier",
+      "_": "../logic/support/outlier"
+    },
+    "synchronous": {
+      "!": "../pages/support/synchronous",
+      "_": "../logic/support/synchronous"
+    },
+    "storemanagement": {
+      "!": "../pages/equipment/storemanagement",
+      "_": "../logic/equipment/storemanagement"
+    },
+    "itemmanagement": {
+      "!": "../pages/equipment/itemmanagement",
+      "_": "../logic/equipment/itemmanagement"
+    },
+    "reportstatistics": {
+      "!": "../pages/report/reportstatistics",
+      "_": "../logic/report/reportstatistics"
+    },
+    "operation": {
+      "!": "../pages/operation/operation",
+      "_": "../logic/operation/operation"
+    },
+    "related": {
+      "!": "../pages/operation/related",
+      "_": "../logic/operation/related"
+    },
+    "sysuser": {
+      "!": "../pages/authority/sysuser",
+      "_": "../logic/authority/sysuser"
+    },
+    "sysrole": {
+      "!": "../pages/authority/sysrole",
+      "_": "../logic/authority/sysrole"
+    },
+    "sysmenu": {
+      "!": "../pages/authority/sysmenu",
+      "_": "../logic/authority/sysmenu"
+    },
+    "station": {
+      "!": "../pages/system/station",
+      "_": "../logic/system/station"
+    },
+    "device": {
+      "!": "../pages/system/device",
+      "_": "../logic/system/device"
+    }
+  },
+  "empty": {
+    "handlebars": [
+      "handlebars-core",
+      "handlebars-helper"
+    ],
+    "highcharts": [
+      "hchart",
+      "hchart-exporting",
+      "hchart-themes",
+      "hchart-custom"
+    ],
+    "datatables": [
+      "jquery-datatables",
+      "datatables-tableTools",
+      "datatables.net-buttons",
+      "datatables-buttons-html5",
+      "datatables-buttons-print",
+      "datatables-responsive",
+      "datatables-scroller",
+      "datatables-fixedColumns"
+    ]
+  },
+  "reverse": {
+    "pdfmake": [
+      "pdfmake_vfs"
+    ],
+    "handlebars-core": [
+      "handlebars-helper"
+    ],
+    "hchart": [
+      "hchart-exporting",
+      "hchart-themes",
+      "hchart-custom"
+    ],
+    "jquery-datatables": [
+      "jquery-datatables-bootstrap",
+      "datatables-tableTools",
+      "datatables.net-buttons",
+      "datatables-buttons-html5",
+      "datatables-buttons-print",
+      "datatables-responsive",
+      "datatables-scroller",
+      "datatables-fixedColumns"
+    ],
+    "jquery": [
+      "hchart",
+      "bootstrap",
+      "slidebars",
+      "jquery-nicescroll",
+      "jquery-ui",
+      "jquery-validation",
+      "jquery-formplus",
+      "jquery-datatables",
+      "jquery-inputfields",
+      "jquery-SuperSlide",
+      "jquery-md5",
+      "jquery-uploadPreviewer",
+      "jquery-qrcode",
+      "imagesloaded",
+      "switchery",
+      "toastr",
+      "bootbox",
+      "icheck",
+      "lightbox2",
+      "select2"
+    ]
+  },
+  "shim": {
+    "hchart-custom":["hchart-exporting"],
+    "datatables-buttons-html5": [
+      "pdfmake_vfs",
+      "jszip"
+    ],
+    "jquery": ["text", "html", "css"],
+    "select2s": ["select2"],
+    "bootstrap-datetimepickerCN": ["bootstrap-datetimepicker"],
+    "fullcalendarCN": ["fullcalendar"],
+    "app": [
+      "jquery-ui",
+      "router",
+      "moment",
+      "prefixfree",
+      "bootstrap",
+      "slidebars",
+      "jquery-nicescroll",
+      "jquery-inputfields",
+      "jquery-validation",
+      "jquery-formplus",
+      "jquery-SuperSlide",
+      "icheck",
+      "select2s",
+      "switchery"
+    ]
+  }
+}

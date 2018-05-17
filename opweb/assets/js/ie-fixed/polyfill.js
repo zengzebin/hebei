@@ -1,0 +1,1 @@
+"function"!=typeof Object.create&&(Object.create=function(e){function t(){}if(1!==arguments.length)throw new Error("Object.crete polyfill only accept one parameter");return t.prototype=e,new t});

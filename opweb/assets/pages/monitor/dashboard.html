@@ -1,0 +1,108 @@
+<div class="slidebar slidebar-2x on"><div class="slidebar-left"><div class="tools-bar"><div class="txtMarquee pull-left"></div><script id="p_info" type="text/x-handlebars-template"><ul class="infoList">
+                    [[#each data]]
+                    <li data-taskNo="[[taskNo]]" data-type="[[type]]" class="level[[level]]">
+                        <a href="javascript:;" target="_blank">[[message]]</a>
+                        <span class="ml-5">[[createTime]]</span>
+                    </li>
+                    [[/each]]
+                </ul></script><div class="pull-right mr-50"><div class="mr-5 pull-left"><select id="c_addvcd" class="w-100"></select></div><div class="mr-5 pull-left"><button id="b_refresh" type="button" class="btn btn-info pull-left"><i class="fa fa-refresh" aria-hidden="true"></i>刷新</button></div></div></div><div id="map"></div><script id="tpl_mapOptPanel" type="text/x-handlebars-template"><div class="map-panel">
+                <ul class="map-select">
+                    [[#each site]]
+                    <li class="[[class]]"><a prop-key="site" prop-value="[[value]]">[[name]]</a></li>
+                    [[/each]]
+                </ul>
+                <div class="map-diver"></div>
+                <ul class="map-select">
+                    [[#each people]]
+                    <li class="[[class]]"><a prop-key="people">[[name]]</a></li>
+                    [[/each]]
+                </ul>
+            </div></script><script id="tpl_mapLegend" type="text/x-handlebars-template"><div class="map-panel">
+                <ul class="map-select">
+                    <li><div class="legend-title">图例</div></li>
+                    [[#each legend]]
+                    <li><a><img src="[[url]]"/>[[title]]</a></li>
+                    [[/each]]
+                </ul>
+            </div></script><script id="tpl_mapBtnBack" type="text/x-handlebars-template"><a type="button" class="btn btn-blue">
+                <i class="fa fa-globe mr-5" aria-hidden="true"></i>显示全图
+            </a></script></div><div class="slidebar-right"><div class="slidebar-switch"><i class="fa fa-pie-chart" aria-hidden="true"></i></div><div class="slidebar-inner"><div class="slidebar-content perfect-scrollbar"></div><script id="p_panel_1" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="col-md-4 station-total">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="chart"></div>
+                        </div>
+                    </div>
+                </section></script><script id="p_panel_2" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="chart1"></div>
+                        <div class="chart2"></div>
+                    </div>
+                </section></script><script id="p_panel_3" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body">
+                        <select class="pull-left w-150 chart-condition">
+                            <option value="0">昨日</option>
+                            <option value="1">近一周</option>
+                            <option value="2">近一个月</option>
+                            <option value="3">汛期</option>
+                        </select>
+                        <div class="chart"></div>
+                    </div>
+                </section></script><script id="p_panel_4" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body">
+                        <div class="col-md-4">
+                            <div class="sum-text"><label class="text-center"><b class="text-area"></b></label></div>
+                            <div class="sum-text"><span class="text-slategray text-nowrap"><span class="text-type"></span>故障站点数量</span></div>
+                            <div class="sum-text"><span class="text-orange error-num">0</span> 站</div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="chart"></div>
+                        </div>
+                    </div>
+                </section></script><script id="p_panel_5" type="text/x-handlebars-template"><section class="panel">
+                    <header class="panel-heading">
+                        [[title]]
+                        <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                    </header>
+                    <div class="panel-body p-5">
+                        <table class="table table-striped data-table dataTable">
+                        </table>
+                    </div>
+                </section></script></div></div></div>

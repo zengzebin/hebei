@@ -1,0 +1,27 @@
+<div><div class="tools-bar"><div class="pull-left"><ol class="breadcrumb"> {{#each model}} <li> {{#if url}} <a href="{{url}}"><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{^}} <a><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{/if}} </li> {{/each}} </ol></div></div><div class="panel-content"><div class="col-md-6 p-0 panel-left"></div><div class="col-md-6 p-0 panel-right"></div></div><script id="p_panel_1" type="text/x-handlebars-template"><section class="panel">
+            <header class="panel-heading">
+                [[title]]
+                <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                    <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+            </header>
+            <div class="panel-body">
+                <select class="pull-left w-150 chart-condition"></select>
+                <div class="chart"></div>
+            </div>
+        </section></script><script id="p_panel_2" type="text/x-handlebars-template"><section class="panel">
+            <header class="panel-heading">
+                [[title]]
+                <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                    <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+            </header>
+            <div class="panel-body p-5">
+                <table class="table table-striped data-table dataTable">
+                </table>
+            </div>
+        </section></script></div>

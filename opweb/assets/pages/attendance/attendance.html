@@ -1,0 +1,15 @@
+<div class="slidebar slidebar-2x on"><div class="slidebar-left"><div class="tools-bar"><div class="pull-left"><ol class="breadcrumb"> {{#each model}} <li> {{#if url}} <a href="{{url}}"><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{^}} <a><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{/if}} </li> {{/each}} </ol></div><div class="pull-right mr-50"><button id="b_refresh" type="button" class="btn btn-info"><i class="fa fa-refresh" aria-hidden="true"></i>刷新</button></div></div><div id="calendar"></div></div><div class="slidebar-right"><div class="slidebar-switch"><i class="fa fa-filter" aria-hidden="true"></i></div><form role="form" class="slidebar-inner"><div class="slidebar-content perfect-scrollbar"><div class="panel-list"></div><script id="p_panel_1" type="text/x-handlebars-template"><section class="panel">
+                        <header class="panel-heading">
+                            [[title]]
+                            <span class="tools pull-right">
+                                    <a class="fa fa-plus box-add" href="javascript:;"></a>
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                                <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+                        </header>
+                        <div class="panel-body p-5">
+                            <table class="table table-striped data-table dataTable">
+                            </table>
+                        </div>
+                    </section></script></div></form></div></div>

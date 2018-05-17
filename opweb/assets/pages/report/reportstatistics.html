@@ -1,0 +1,94 @@
+<div><div class="tools-bar"><div class="pull-left"><ol class="breadcrumb"> {{#each model}} <li> {{#if url}} <a href="{{url}}"><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{^}} <a><i class="{{#if icon}}{{icon}}{{^}}fa fa-certificate{{/if}}" aria-hidden="true"></i> {{title}} </a> {{/if}} </li> {{/each}} </ol></div></div><div class="panel-content"><div class="col-md-6 p-0 panel-left"></div><div class="col-md-6 p-0 panel-right"></div></div><script id="p_panel_1" type="text/x-handlebars-template"><section class="panel">
+            <header class="panel-heading">
+                [[title]]
+                <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                    <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+            </header>
+            <div class="panel-body">
+                <!--<select class="pull-left w-150 chart-condition"></select>-->
+                <div class="people-total">
+                    <span>运维人员总人数：<b id="p_total" class="text-blue">0</b> 人</span>
+                    <span>签到人数：<b id="p_sign" class="text-green">0</b> 人</span>
+                    <span>待命人数：<b id="p_wait" class="text-orange">0</b> 人</span>
+                    <span>休假人数：<b id="p_vacation" class="text-red">0</b> 人</span>
+                </div>
+                <div class="chart1"></div>
+                <div class="chart2"></div>
+            </div>
+        </section></script><script id="p_panel_2" type="text/x-handlebars-template"><section class="panel">
+            <header class="panel-heading">
+                [[title]]
+                <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                    <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+            </header>
+            <div class="panel-body p-5">
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <select id="c_time">
+                            <option value="1">近一天</option>
+                            <option value="2">近一周</option>
+                            <option value="3">近一月</option>
+                            <option value="4">自定义</option>
+                        </select>
+                        <label for="c_time" class="active">按时间查找：</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <input id="c_startTime" type="text"/>
+                        <label for="c_startTime">开始日期：</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <input id="c_endTime" type="text"/>
+                        <label for="c_endTime">结束日期：</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <select id="c_addvcd"></select>
+                        <label for="c_addvcd" class="active">区域：</label>
+                    </div>
+                </div>
+                <div  class="pull-right mb-5">
+                    <button id="b_refresh" type="button" class="btn btn-info mr-5"><i class="fa fa-refresh mr-5" aria-hidden="true"></i>查询</button>
+                    <div id="t_button" class="pull-right"></div>
+                </div>
+                <table class="table table-striped data-table dataTable">
+                </table>
+            </div>
+        </section></script><script id="p_panel_3" type="text/x-handlebars-template"><section class="panel">
+            <header class="panel-heading">
+                [[title]]
+                <span class="tools pull-right">
+                                    <a class="fa fa-repeat box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse fa fa-chevron-down" href="javascript:;"></a>
+                    <!--<a class="t-close fa fa-times" href="javascript:;"></a>-->
+                                </span>
+            </header>
+            <div class="panel-body">
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <input id="c_startTime" type="text"/>
+                        <label for="c_startTime">开始日期：</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="input-field">
+                        <input id="c_endTime" type="text"/>
+                        <label for="c_endTime">结束日期：</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button id="b_refresh" type="button" class="btn btn-info pull-right mt-30"><i class="fa fa-refresh mr-5" aria-hidden="true"></i>查询</button>
+                </div>
+                <div class="chart"></div>
+            </div>
+        </section></script></div>

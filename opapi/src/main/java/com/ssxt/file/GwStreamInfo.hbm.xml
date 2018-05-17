@@ -1,0 +1,142 @@
+﻿<bean>
+	<property name="drp" type="java.lang.Double">
+		<column name="DRP" precision="5" scale="1">
+			<comment unit="mm">时段降水量</comment>
+		</column>
+	</property>
+	<property name="intv" type="java.lang.Double">
+		<column name="INTV" precision="5">
+			<comment unit="h">时段长</comment>
+		</column>
+	</property>
+	<property name="pdr" type="java.lang.Double">
+		<column name="PDR" precision="5">
+			<comment unit="">降水历时</comment>
+		</column>
+	</property>
+	<property name="dyp" type="java.lang.Double">
+		<column name="DYP" precision="5" scale="1">
+			<comment unit="mm">DYP</comment>
+		</column>
+	</property>
+	<property name="wth" type="java.lang.String">
+		<column name="WTH" length="1">
+			<comment unit="">天气状况</comment>
+		</column>
+	</property>
+	<property name="z" type="java.lang.Double">
+		<column name="Z" precision="7" scale="3">
+			<comment unit="m">水位</comment>
+		</column>
+	</property>
+	<property name="q" type="java.lang.Double">
+		<column name="Q" precision="9" scale="3">
+			<comment unit="m³/s">流量</comment>
+		</column>
+	</property>
+	<property name="xsa" type="java.lang.Double">
+		<column name="XSA" precision="9" scale="3">
+			<comment unit=" m²">断面过水面积</comment>
+		</column>
+	</property>
+	<property name="xsavv" type="java.lang.Double">
+		<column name="XSAVV" precision="5" scale="3">
+			<comment unit="m/s">断面平均流速</comment>
+		</column>
+	</property>
+	<property name="xsmxv" type="java.lang.Double">
+		<column name="XSMXV" precision="5" scale="3">
+			<comment unit="m/s">断面最大流速</comment>
+		</column>
+	</property>
+	<property name="flwchrcd" type="java.lang.String">
+		<column name="FLWCHRCD" length="1">
+			<comment unit="">河水特征码</comment>
+		</column>
+	</property>
+	<property name="wptn" type="java.lang.String">
+		<column name="WPTN" length="1">
+			<comment unit="">水势</comment>
+		</column>
+	</property>
+	<property name="msqmt" type="java.lang.String">
+		<column name="MSQMT" length="1">
+			<comment unit="">测流方法</comment>
+		</column>
+	</property>
+	<property name="msamt" type="java.lang.String">
+		<column name="MSAMT" length="1">
+			<comment unit="">测积方法</comment>
+		</column>
+	</property>
+	<property name="msvmt" type="java.lang.String">
+		<column name="MSVMT" length="1">
+			<comment unit="">测速方法</comment>
+		</column>
+	</property>
+	<property name="rz" type="java.lang.Double">
+		<column name="RZ" precision="7" scale="3">
+			<comment unit="m">库上水位</comment>
+		</column>
+	</property>
+	<property name="inq" type="java.lang.Double">
+		<column name="INQ" precision="9" scale="3">
+			<comment unit="m³/s">入库流量</comment>
+		</column>
+	</property>
+	<property name="w" type="java.lang.Double">
+		<column name="W" precision="9" scale="3">
+			<comment unit="&lt;span class='sub' sub='6' &gt;10&lt;/span&gt;&lt;span class='sub' sub='3'&gt;M&lt;/span&gt; ">蓄水量</comment>
+		</column>
+	</property>
+	<property name="blrz" type="java.lang.Double">
+		<column name="BLRZ" precision="7" scale="3">
+			<comment unit="m">库下水位</comment>
+		</column>
+	</property>
+	<property name="otq" type="java.lang.Double">
+		<column name="OTQ" precision="9" scale="3">
+			<comment unit="m³/s">出库流量</comment>
+		</column>
+	</property>
+	<property name="rwchrcd" type="java.lang.String">
+		<column name="RWCHRCD" length="1">
+			<comment unit="">库水特征码</comment>
+		</column>
+	</property>
+	<property name="rwptn" type="java.lang.String">
+		<column name="RWPTN" length="1">
+			<comment unit="">库水水势</comment>
+		</column>
+	</property>
+	<property name="inqdr" type="java.lang.Double">
+		<column name="INQDR" precision="5">
+			<comment unit="">入流时段长</comment>
+		</column>
+	</property>
+	<property name="msqmt2" type="java.lang.String">
+		<column name="MSQMT2" length="1">
+			<comment unit="">测流方法</comment>
+		</column>
+	</property>
+	<property name="pj" type="java.lang.String">
+		<column name="PJ" length="5">
+			<comment unit="mm">当前降水量</comment>
+		</column>
+	</property>
+	<property name="pt" type="java.lang.String">
+		<column name="PT" length="5">
+			<comment unit="mm">降水量累计值</comment>
+		</column>
+	</property>
+	<property name="pd" type="java.lang.String">
+		<column name="PD" length="5">
+			<comment unit="mm">日降水量</comment>
+		</column>
+	</property>
+	<property name="vt" type="java.lang.Double">
+		<column name="VT" precision="10" scale="3">
+			<comment unit="V">电压</comment>
+		</column>
+	</property>
+</bean>

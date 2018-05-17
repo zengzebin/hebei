@@ -1,0 +1,8 @@
+mvn install:install-file -DgroupId=com.alibaba -DartifactId=fastjson -Dversion=1.2.16 -Dpackaging=jar -Dfile=D:\java\jar\fastjson-1.2.16.jar
+
+
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.16</version>
+</dependency>

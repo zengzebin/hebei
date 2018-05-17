@@ -1,0 +1,1 @@
+Highcharts.setOptions({exporting:{enabled:!1},lang:{printChart:"打印图表",downloadJPEG:"下载JPEG 图片",downloadPDF:"下载PDF文档",downloadPNG:"下载PNG图片",downloadSVG:"下载SVG矢量图"}}),Highcharts.getChart=function(t){var a=$(t).data("highchartsChart"),n=$.map(Highcharts.charts,function(t){if(t.index===a)return t});return n&&n.length>0?n[0]:void 0};

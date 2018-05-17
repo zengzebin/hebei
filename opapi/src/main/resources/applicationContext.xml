@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:amq="http://activemq.apache.org/schema/core"
+	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" 
+    http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	
+	http://www.springframework.org/schema/task 
+    http://www.springframework.org/schema/task/spring-task-3.1.xsd 
+	
+	http://www.springframework.org/schema/context   
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+	
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+	
+	http://www.springframework.org/schema/jms
+    http://www.springframework.org/schema/jms/spring-jms-3.1.xsd
+   
+    http://activemq.apache.org/schema/core
+    http://activemq.apache.org/schema/core/activemq-core-5.12.1.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- <task:annotation-driven /> -->   <!-- 定时器开关 -->
+
+
+	<bean id="scheduler" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+
+
+	<aop:aspectj-autoproxy />
+	<!-- 扫描类包，将标注Spring注解的类自动转化Bean，同时完成Bean的注入 -->
+
+	<context:component-scan base-package="com.ssxt.task" />
+	<context:component-scan base-package="com.ssxt.common.dao" />
+	<context:component-scan base-package="com.ssxt.activiti.service" />
+
+
+	<context:component-scan base-package="com.ssxt.web.dao" />
+	<context:component-scan base-package="com.ssxt.web.dao.warning" />
+
+	<context:component-scan base-package="com.ssxt.web.service" />
+	<context:component-scan base-package="com.ssxt.web.service.warning" />
+
+
+
+
+	<context:component-scan base-package="com.ssxt.redis" />
+	<context:component-scan base-package="com.ssxt.file" />
+
+
+
+
+	<!-- <context:component-scan base-package="com.ssxt.activeMQ" /> -->
+
+	<!-- <context:component-scan base-package="com.ssxt.activeMQ" /> -->
+
+	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true" />
+
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate"
+		p:sessionFactory-ref="sessionFactory" />
+
+	<!-- <bean id="applicationContext" class="com.ssxt.supervise.common.util.SpringBeanUtil"/> -->
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+		p:dataSource-ref="dataSource" p:lobHandler-ref="lobHandler">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate3.SpringSessionContext
+				</prop>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.connection.autocommit">${hibernate.autocommit}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<!-- <prop key="hibernate.hbm2ddl.auto">create</prop> -->
+				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->			<!-- 是否格式化sql -->
+				<prop key="hibernate.format_sql">false</prop>
+				<!-- 是否使用注释 -->
+				<!-- <prop key="hibernate.use_sql_comments">${hibernate.show_sql}</prop> -->
+				<prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+			</props>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.ssxt.web.sys.bean</value>
+				<value>com.ssxt.web.bean</value>
+				<value>com.ssxt.web.bean.warning</value>
+			</list>
+		</property>
+		<!-- <property name="mappingDirectoryLocations"> <list> <value>classpath:/com/ssxt/web/hbm</value> 
+			</list> </property> -->
+	</bean>
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+
+		<!-- 自动重连配置 <property name="maxIdle" value="30" /> <property name="minIdle" 
+			value="2" /> -->
+		<!-- 连接被泄露时是否打印 <property name="logAbandoned" value="true"/> -->
+		<!--removeAbandoned: 是否自动回收超时连接 <property name="removeAbandoned" value="true"/> -->
+		<!--removeAbandonedTimeout: 超时时间(以秒数为单位) <property name="removeAbandonedTimeout" 
+			value="10"/> -->
+		<!--maxWait: 超时等待时间以毫秒为单位 1000等于60秒 <property name="maxWait" value="1000"/> -->
+		<property name="testWhileIdle">
+			<value>true</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+		<!--<property name="testOnReturn" ><value>false</value></property> -->
+		<property name="validationQuery">
+			<value>select 1</value>
+		</property>
+
+
+
+		<!-- 定时删除连接，解决数据库连接不稳定的问题 -->
+		<!-- timeBetweenEvictionRunsMillis -1 在空闲连接回收器线程运行期间休眠的时间值,以毫秒为单位. 如果设置为非正数,则不运行空闲连接回收器线程 
+			numTestsPerEvictionRun 3 在每次空闲连接回收器线程(如果有)运行时检查的连接数量 minEvictableIdleTimeMillis 
+			1000 * 60 * 30 连接在池中保持空闲而不被空闲连接回收器线程(如果有)回收的最小时间值，单位毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis">
+			<value>3600000</value>
+		</property>
+		<property name="minEvictableIdleTimeMillis">
+			<value>18000000</value>
+		</property>
+		<!--<property name="numTestsPerEvictionRun" ><value>5</value></property> 
+			<property name="minEvictableIdleTimeMillis" ><value>300000</value></property> -->
+
+	</bean>
+
+	<!-- 配置Hibernate事务管理器 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 声明使用注解式事务,在相应的方法上使用@Transactional声明启用事务 -->
+	<tx:annotation-driven proxy-target-class="true"
+		transaction-manager="txManager" />
+
+	<bean id="exceptionHandler" class="com.ssxt.common.exception.MyExceptionHandler" />
+
+	<bean id="SpringUtil" class="com.ssxt.common.util.SpringUtil" />
+
+
+	<!-- <import resource="Redis.xml" /> -->
+	<!-- <import resource="activitiMQ.xml" /> -->
+
+</beans>

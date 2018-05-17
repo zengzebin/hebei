@@ -1,0 +1,1 @@
+define(function(){var n=/^(.*)\[([^\]]*)\]$/;return{load:function(i,t,c,e){var f=n.exec(i);t(f[2].split(","),function(){t([f[1]],function(n){c(n)})})}}});

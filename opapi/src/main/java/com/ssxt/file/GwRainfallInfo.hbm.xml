@@ -1,0 +1,44 @@
+﻿
+<bean>
+	<property name="drp" type="java.lang.Double">
+		<column name="DRP" precision="5" scale="1">
+			<comment unit="mm">时段降水量</comment>
+		</column>
+	</property>
+	<property name="intv" type="java.lang.Double">
+		<column name="INTV" precision="5">
+			<comment unit="h">时段长</comment>
+		</column>
+	</property>
+	<property name="pdr" type="java.lang.Double">
+		<column name="PDR" precision="5">
+			<comment unit="">降水历时</comment>
+		</column>
+	</property>
+	<property name="dyp" type="java.lang.Double">
+		<column name="DYP" precision="5" scale="1">
+			<comment unit="mm">DYP</comment>
+		</column>
+	</property>
+	<property name="wth" type="java.lang.String">
+		<column name="WTH" length="1">
+			<comment unit="">天气状况</comment>
+		</column>
+	</property>
+	<property name="pt" type="java.lang.String">
+		<column name="PT" length="5">
+			<comment unit="mm">降水量累计值</comment>
+		</column>
+	</property>
+	<property name="pd" type="java.lang.String">
+		<column name="PD" length="5">
+			<comment unit="mm">日降水量</comment>
+		</column>
+	</property>
+	<property name="vt" type="java.lang.Double">
+		<column name="VT" precision="10" scale="3">
+			<comment unit="V">电压</comment>
+		</column>
+	</property>
+
+</bean>

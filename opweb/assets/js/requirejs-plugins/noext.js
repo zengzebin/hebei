@@ -1,0 +1,1 @@
+define(function(){return{load:function(n,o,t,e){o([o.toUrl(n)],function(n){t(n)})},normalize:function(n,o){return(n+=n.indexOf("?")<0?"?":"&")+"noext=1"}}});
